@@ -7,6 +7,6 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return "Hello estou rodando dentro do Openshift Origin"
-  
- if __name__ == '__main__':
+
+if __name__ == '__main__':
     app.run(debug=True,threaded=True) 
