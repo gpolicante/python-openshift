@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Python Flask - Album de Fotos</title>
+<h1>Selecione a foto a subir</h1>
+<form method=post enctype=multipart/form-data>
+  <p><input type="file" name="foto">
+     <input type=submit value="Enviar">
+</form>
+<hr/>
+Album com volumes persistentes =D
+<hr/>
+{% for f in fotos %}
+<img src="static/imagens/{{f}}" width="250" height="250" />
+{% endfor %}
