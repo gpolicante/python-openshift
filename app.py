@@ -15,7 +15,7 @@ def index():
     if (request.method == "POST"):
         foto = request.files["foto"]
         foto.save(os.path.abspath(os.path.dirname(__file__))+"/static/imagens/%s"%foto.filename)
-    fotos = os.listdir("static/imagens/")
+    fotos = os.listdir(os.path.abspath(os.path.dirname(__file__)+"/static/imagens/"))
     return render_template("index.html",fotos=fotos,usuario=usuario)
     
 @app.route("/login")
