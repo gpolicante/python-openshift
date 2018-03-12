@@ -6,7 +6,11 @@
      <input type=submit value="Enviar">
 </form>
 <hr/>
-Album com volumes persistentes =D
+{% if usuario %}
+Album de fotos do {{usuario}}
+{% else %}
+Nenhum usuario autenticado
+{% endif %}
 <hr/>
 {% for f in fotos %}
 <img src="static/imagens/{{f}}" width="250" height="250" />
