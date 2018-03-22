@@ -23,7 +23,7 @@ class RedisSessionInterface(SessionInterface):
 
     def __init__(self, redis=None, prefix='session:'):
         if redis is None:
-            redis = Redis(host="redis")
+            redis = Redis(host="CURSO_DOCKER")
         self.redis = redis
         self.prefix = prefix
 
